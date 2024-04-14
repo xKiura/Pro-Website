@@ -217,13 +217,21 @@ img {
   border-radius: 25px;
   text-align: center;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.25s;
 }
 
 .faq ul.faq-menu li.active {
   background: var(--primary-color);
   color: #fff;
   transition: 0.5s;
+}
+
+.faq ul.faq-menu li:hover {
+  opacity: 0.8;
+}
+
+.faq ul.faq-menu li.active:hover {
+  opacity: 0.8;
 }
 
 /* Footer */

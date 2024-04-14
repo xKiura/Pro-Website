@@ -1,12 +1,17 @@
 // Toggle Button
-document.addEventListener('DOMContentLoaded', () => {
-  const activeButton = document.querySelector('.list-btn active');
-  const otherListButtons = document.querySelector('.list-btn');
+const listButtons = document.querySelectorAll('.list-btn');
 
-  otherListButtons.addEventListener('click', () => {
-    activeButton.classList.remove('active');
-    otherListButtons.classList.add('active');
-  });
+function activate() {
+  if (!this.classList.contains('active')) {
+    listButtons.forEach((button) => {
+      button.classList.remove('active');
+    });
+    this.classList.add('active');
+  }
+}
+
+listButtons.forEach((button) => {
+  button.addEventListener('click', activate);
 });
 
 // FAQ Accordion
